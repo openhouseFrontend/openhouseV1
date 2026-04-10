@@ -1,11 +1,9 @@
-import Image from "next/image";
-
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { PropertyCard, type PropertyCardData } from "@/src/features/property/components/property-card";
 
 const filters = ["All", "Ready to move", "New launch", "3 BHK", "Luxury"];
 
-const properties = [
+const properties: PropertyCardData[] = [
   {
     title: "Ireo Victory Valley",
     location: "Sector 67, Gurugram",
@@ -72,50 +70,7 @@ export function FeaturedProperties() {
 
         <div className="grid gap-4 lg:grid-cols-3">
           {properties.map((property) => (
-            <article
-              key={property.title}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-primary hover:bg-primary"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
-                  src={property.image}
-                  alt={property.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                />
-                <Badge className="absolute top-3 left-3 h-5 rounded-full bg-primary px-2.5 text-[10px] font-semibold text-white hover:bg-primary">
-                  {property.label}
-                </Badge>
-              </div>
-
-              <div className="p-4 sm:p-5">
-                <h3 className="text-xl leading-tight font-bold text-slate-900 transition-colors duration-300 group-hover:text-white">
-                  {property.title}
-                </h3>
-                <p className="mt-1 text-sm text-slate-500 transition-colors duration-300 group-hover:text-white/90">
-                  {property.location}
-                </p>
-                <p className="mt-2 text-3xl leading-none font-bold text-slate-900 transition-colors duration-300 group-hover:text-white">
-                  {property.price}
-                </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {property.tags.map((tag) => (
-                    <Badge
-                      key={tag}
-                      variant="outline"
-                      className="h-5 rounded-full border-slate-200 bg-white px-2.5 text-[11px] font-medium text-slate-700 transition-all duration-300 group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-
-                <Button className="mt-4 h-9 rounded-lg bg-primary px-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#E64A19] group-hover:bg-white group-hover:text-primary">
-                  View Details
-                </Button>
-              </div>
-            </article>
+            <PropertyCard key={property.title} property={property} variant="featured" />
           ))}
         </div>
       </div>

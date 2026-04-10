@@ -98,6 +98,20 @@ export function HomeHero() {
             </Button>
           </form>
 
+          <form
+            onSubmit={onSubmit}
+            className="mt-5 flex gap-2 rounded-2xl border border-slate-200 bg-background p-2 shadow-lg sm:hidden"
+            aria-label="Property search form mobile"
+          >
+            <Input
+              placeholder="Search locality or project"
+              className="h-10 min-w-0 flex-1 rounded-xl border-0 bg-slate-100 text-sm"
+            />
+            <Button type="submit" className="h-10 rounded-xl px-4 text-sm">
+              Search
+            </Button>
+          </form>
+
           <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-6 sm:grid-cols-2 lg:grid-cols-4">
             {metrics.map((item) => (
               <div key={item.label} className="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2.5 backdrop-blur">
