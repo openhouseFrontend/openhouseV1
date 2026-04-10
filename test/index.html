@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Openhouse - Premium Homes in Gurugram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#FFF4EE",
+              100: "#FFE7DA",
+              500: "#FA541C",
+              600: "#E64A19",
+              900: "#0F172A"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 8px 30px rgba(15,23,42,0.10)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 antialiased">
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
+      <a href="#" class="focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md" aria-label="Openhouse home">
+        <img src="D-logo.png" alt="Openhouse logo" class="h-7 w-auto sm:h-8">
+      </a>
+      <button id="menuToggle" class="inline-flex items-center justify-center rounded-md p-2 text-slate-700 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menuIconClose" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <nav class="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+        <a href="#featured" class="hover:text-slate-900 transition-colors">Buy</a>
+        <a href="#" class="hover:text-slate-900 transition-colors">Sell</a>
+        <a href="#how-it-works" class="hover:text-slate-900 transition-colors">How it works</a>
+        <a href="#testimonials" class="hover:text-slate-900 transition-colors">Testimonials</a>
+        <a href="#trusted" class="hover:text-slate-900 transition-colors">Trusted by</a>
+        <button class="rounded-lg bg-brand-500 px-4 py-2 text-white transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+          List Property
+        </button>
+      </nav>
+    </div>
+    <div id="mobileMenu" class="absolute left-0 right-0 top-full hidden border-t border-slate-200 bg-white shadow-soft md:hidden">
+      <nav class="mx-auto flex w-full max-w-7xl flex-col px-4 py-3 text-sm font-medium text-slate-700 sm:px-6">
+        <a href="#featured" class="rounded-md px-3 py-2 hover:bg-slate-100">Buy</a>
+        <a href="#" class="rounded-md px-3 py-2 hover:bg-slate-100">Sell</a>
+        <a href="#how-it-works" class="rounded-md px-3 py-2 hover:bg-slate-100">How it works</a>
+        <a href="#testimonials" class="rounded-md px-3 py-2 hover:bg-slate-100">Testimonials</a>
+        <a href="#trusted" class="rounded-md px-3 py-2 hover:bg-slate-100">Trusted by</a>
+        <button class="mt-2 rounded-lg bg-brand-500 px-4 py-2.5 text-white transition hover:bg-brand-600">List Property</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="relative h-screen w-screen overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover">
+      <source src="https://res.cloudinary.com/uu3loaar/video/upload/v1757504119/Web%20Assets/videos/Buy_home_video-1.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/28 to-slate-900/8"></div>
+
+    <div class="relative mx-auto flex h-full w-full max-w-7xl items-center px-4 py-10 sm:px-6 md:py-12 lg:px-8">
+      <div class="w-full max-w-4xl">
+        <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-500 sm:text-xs">Gurugram's trusted home platform</p>
+        <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.06] text-white sm:text-5xl lg:text-6xl">
+          Find your perfect home <br class="hidden sm:block"> without the stress.
+        </h1>
+        <p class="mt-5 hidden max-w-2xl text-sm leading-relaxed text-white/90 sm:block sm:text-base">
+          Verified listings, clear pricing, and local experts who guide you from shortlist to keys.
+          No hidden brokerage. No confusion.
+        </p>
+        <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:hidden">
+          Verified homes, transparent pricing, and fast support from local experts.
+        </p>
+
+        <div class="mt-6 flex w-full flex-col gap-3 sm:mt-7 sm:max-w-md sm:flex-row">
+          <button class="w-full rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+            Explore Properties
+          </button>
+          <button class="hidden w-full rounded-lg border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:block">
+            Book Free Consultation
+          </button>
+        </div>
+
+        <form id="searchForm" class="mt-6 hidden w-full grid-cols-1 gap-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-soft sm:mt-7 md:grid md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_auto]" aria-label="Property search form">
+          <label class="rounded-xl border border-transparent bg-slate-100 px-3 py-2.5 focus-within:border-brand-500 focus-within:bg-white">
+            <span class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-500">Location</span>
+            <input id="location" type="text" placeholder="Locality, project, or builder" class="w-full bg-transparent text-base text-slate-900 placeholder:text-slate-500 focus:outline-none">
+          </label>
+          <label class="rounded-xl border border-transparent bg-slate-100 px-3 py-2.5 focus-within:border-brand-500 focus-within:bg-white">
+            <span class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-500">Budget</span>
+            <select class="w-full bg-transparent text-base text-slate-900 focus:outline-none">
+              <option>Any Budget</option>
+              <option>Under 1 Cr</option>
+              <option>1 Cr - 3 Cr</option>
+              <option>3 Cr - 5 Cr</option>
+              <option>5 Cr+</option>
+            </select>
+          </label>
+          <label class="rounded-xl border border-transparent bg-slate-100 px-3 py-2.5 focus-within:border-brand-500 focus-within:bg-white">
+            <span class="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-slate-500">Property Type</span>
+            <select class="w-full bg-transparent text-base text-slate-900 focus:outline-none">
+              <option>Any Type</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>Builder Floor</option>
+              <option>Penthouse</option>
+            </select>
+          </label>
+          <button type="submit" class="rounded-xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+            Search
+          </button>
+        </form>
+
+        <form id="searchFormMobile" class="mt-5 flex gap-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-soft sm:hidden" aria-label="Property search form mobile">
+          <input id="locationMobile" type="text" placeholder="Search locality or project" class="min-w-0 flex-1 rounded-xl bg-slate-100 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+          <button type="submit" class="rounded-xl bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white">Search</button>
+        </form>
+
+        <div class="mt-6 hidden grid-cols-1 gap-2.5 sm:grid sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2.5 backdrop-blur">
+            <p class="text-3xl font-bold leading-none text-white">2,400+</p>
+            <p class="mt-1 text-xs text-white/85">Active listings</p>
+          </div>
+          <div class="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2.5 backdrop-blur">
+            <p class="text-3xl font-bold leading-none text-white">180+</p>
+            <p class="mt-1 text-xs text-white/85">Verified builders</p>
+          </div>
+          <div class="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2.5 backdrop-blur">
+            <p class="text-3xl font-bold leading-none text-white">12,000+</p>
+            <p class="mt-1 text-xs text-white/85">Homes sold</p>
+          </div>
+          <div class="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2.5 backdrop-blur">
+            <p class="text-3xl font-bold leading-none text-white">98%</p>
+            <p class="mt-1 text-xs text-white/85">Client satisfaction</p>
+          </div>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 gap-2 sm:hidden">
+          <div class="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2 backdrop-blur">
+            <p class="text-xl font-bold leading-none text-white">2,400+</p>
+            <p class="mt-1 text-[11px] text-white/85">Listings</p>
+          </div>
+          <div class="rounded-xl border border-white/20 bg-slate-900/45 px-3 py-2 backdrop-blur">
+            <p class="text-xl font-bold leading-none text-white">180+</p>
+            <p class="mt-1 text-[11px] text-white/85">Builders</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="featured" class="py-14 sm:py-16">
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">Featured properties</p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Handpicked premium homes in Gurugram</h2>
+          </div>
+          <a href="#" class="text-sm font-semibold text-brand-500 hover:text-brand-600">View all listings</a>
+        </div>
+
+        <div class="mb-6 flex flex-wrap gap-2">
+          <button class="rounded-full border border-brand-500 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-500">All</button>
+          <button class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600">Ready to move</button>
+          <button class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600">New launch</button>
+          <button class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600">3 BHK</button>
+          <button class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600">Luxury</button>
+        </div>
+
+        <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible">
+          <article class="group min-w-[86%] snap-start overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:border-brand-500 hover:bg-brand-500 lg:min-w-0">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Ireo Victory Valley exterior" class="h-full w-full object-cover">
+              <div class="absolute left-3 top-3 flex gap-2">
+                <span class="rounded-full bg-slate-900/80 px-2.5 py-1 text-[10px] font-semibold text-white">New</span>
+                <span class="rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold text-slate-900">RERA</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-xl font-bold text-slate-900 transition group-hover:text-white">Ireo Victory Valley</h3>
+              <p class="mt-1 text-sm text-slate-500 transition group-hover:text-white/90">Sector 67, Gurugram</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900 transition group-hover:text-white">₹2.8 Cr onwards</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">3 BHK</span>
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">2,200 sq.ft</span>
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">Furnished</span>
+              </div>
+              <button class="mt-4 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-white group-hover:text-brand-500">View Details</button>
+            </div>
+          </article>
+
+          <article class="group min-w-[86%] snap-start overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:border-brand-500 hover:bg-brand-500 lg:min-w-0">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="DLF The Arbour property view" class="h-full w-full object-cover">
+              <div class="absolute left-3 top-3 flex gap-2">
+                <span class="rounded-full bg-slate-900/80 px-2.5 py-1 text-[10px] font-semibold text-white">Hot</span>
+                <span class="rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold text-slate-900">RERA</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-xl font-bold text-slate-900 transition group-hover:text-white">DLF The Arbour</h3>
+              <p class="mt-1 text-sm text-slate-500 transition group-hover:text-white/90">Sector 63, Golf Course Extension</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900 transition group-hover:text-white">₹4.5 Cr onwards</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">4 BHK</span>
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">3,500 sq.ft</span>
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">Clubhouse</span>
+              </div>
+              <button class="mt-4 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-white group-hover:text-brand-500">View Details</button>
+            </div>
+          </article>
+
+          <article class="group min-w-[86%] snap-start overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:border-brand-500 hover:bg-brand-500 lg:min-w-0">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-200">
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80" alt="M3M Skywalk facade" class="h-full w-full object-cover">
+              <div class="absolute left-3 top-3 flex gap-2">
+                <span class="rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold text-slate-900">RERA</span>
+              </div>
+            </div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-xl font-bold text-slate-900 transition group-hover:text-white">M3M Skywalk</h3>
+              <p class="mt-1 text-sm text-slate-500 transition group-hover:text-white/90">Sector 74, Gurugram</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900 transition group-hover:text-white">₹1.2 Cr onwards</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">2 BHK</span>
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">1,350 sq.ft</span>
+                <span class="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 transition group-hover:border-white/40 group-hover:bg-white/15 group-hover:text-white">Metro Access</span>
+              </div>
+              <button class="mt-4 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-white group-hover:text-brand-500">View Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="py-14 sm:py-16">
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">How it works</p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">A structured home-buying process</h2>
+          </div>
+          <p class="max-w-xl text-sm text-slate-600 sm:text-right">From discovery to documentation, every step is managed by specialists so you move faster with better decisions.</p>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold tracking-wide text-brand-500">STEP 01</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Discovery</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Consult & shortlist</h3>
+            <p class="mt-2 text-sm text-slate-600">Tell us your budget, preferred localities, and lifestyle needs. We curate high-fit options instead of flooding you with listings.</p>
+            <div class="mt-4 rounded-xl bg-slate-50 px-3 py-2 text-xs font-medium text-slate-600">Output: Curated shortlist in 24 hours</div>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold tracking-wide text-brand-500">STEP 02</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Evaluation</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Visit & compare</h3>
+            <p class="mt-2 text-sm text-slate-600">Tour verified homes with our advisors, compare pricing benchmarks, and evaluate fit using transparent data-backed insights.</p>
+            <div class="mt-4 rounded-xl bg-slate-50 px-3 py-2 text-xs font-medium text-slate-600">Output: Final 1-2 properties with confidence</div>
+          </article>
+
+          <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="mb-4 flex items-center justify-between">
+              <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold tracking-wide text-brand-500">STEP 03</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Closure</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Negotiate & close</h3>
+            <p class="mt-2 text-sm text-slate-600">We support offer strategy, legal checks, and final paperwork so you close safely without unexpected delays or hidden costs.</p>
+            <div class="mt-4 rounded-xl bg-slate-50 px-3 py-2 text-xs font-medium text-slate-600">Output: Smooth closure with full documentation</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-14 sm:py-16">
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">Testimonials</p>
+        <div class="flex flex-wrap items-end justify-between gap-3">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Loved by home buyers in Gurugram</h2>
+          <div class="hidden gap-2 sm:flex">
+            <button id="testimonialPrev" class="rounded-full border border-slate-200 bg-white p-2.5 text-slate-600 transition hover:border-brand-500 hover:text-brand-500" aria-label="Previous testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button id="testimonialNext" class="rounded-full border border-slate-200 bg-white p-2.5 text-slate-600 transition hover:border-brand-500 hover:text-brand-500" aria-label="Next testimonial">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="testimonialCarousel" class="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+          <div id="testimonialTrack" class="flex transition-transform duration-700 ease-out">
+            <article class="w-full shrink-0 p-6 sm:p-8 lg:p-10">
+              <div class="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
+                <div>
+                  <span class="text-5xl font-bold leading-none text-brand-100">“</span>
+                  <p class="mt-2 text-lg leading-relaxed text-slate-700 sm:text-xl">Openhouse made the entire process smooth and genuinely delightful. The listings were accurate, negotiations were transparent, and we closed in under three weeks without stress.</p>
+                  <p class="mt-5 text-brand-500">★★★★★</p>
+                </div>
+                <div class="rounded-2xl bg-brand-50 p-5 sm:p-6">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Priya Sharma" class="h-14 w-14 rounded-full object-cover ring-2 ring-white">
+                    <div>
+                      <p class="text-base font-semibold text-slate-900">Priya Sharma</p>
+                      <p class="text-sm text-slate-500">Bought in Sector 67</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 space-y-2 text-sm text-slate-600">
+                    <p><span class="font-semibold text-slate-900">Type:</span> 3 BHK Apartment</p>
+                    <p><span class="font-semibold text-slate-900">Timeline:</span> 19 days</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="w-full shrink-0 p-6 sm:p-8 lg:p-10">
+              <div class="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
+                <div>
+                  <span class="text-5xl font-bold leading-none text-brand-100">“</span>
+                  <p class="mt-2 text-lg leading-relaxed text-slate-700 sm:text-xl">We shortlisted only verified homes and never faced hidden charges. The team handled legal checks and valuation details with incredible professionalism.</p>
+                  <p class="mt-5 text-brand-500">★★★★★</p>
+                </div>
+                <div class="rounded-2xl bg-brand-50 p-5 sm:p-6">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Rahul Mehta" class="h-14 w-14 rounded-full object-cover ring-2 ring-white">
+                    <div>
+                      <p class="text-base font-semibold text-slate-900">Rahul Mehta</p>
+                      <p class="text-sm text-slate-500">Bought in DLF Phase 5</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 space-y-2 text-sm text-slate-600">
+                    <p><span class="font-semibold text-slate-900">Type:</span> 4 BHK Luxury Home</p>
+                    <p><span class="font-semibold text-slate-900">Timeline:</span> 24 days</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="w-full shrink-0 p-6 sm:p-8 lg:p-10">
+              <div class="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-center">
+                <div>
+                  <span class="text-5xl font-bold leading-none text-brand-100">“</span>
+                  <p class="mt-2 text-lg leading-relaxed text-slate-700 sm:text-xl">From first shortlist to final paperwork, every step felt curated and confident. This is the most buyer-friendly real estate journey we’ve experienced.</p>
+                  <p class="mt-5 text-brand-500">★★★★★</p>
+                </div>
+                <div class="rounded-2xl bg-brand-50 p-5 sm:p-6">
+                  <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Neha Arora" class="h-14 w-14 rounded-full object-cover ring-2 ring-white">
+                    <div>
+                      <p class="text-base font-semibold text-slate-900">Neha Arora</p>
+                      <p class="text-sm text-slate-500">Bought in New Gurugram</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 space-y-2 text-sm text-slate-600">
+                    <p><span class="font-semibold text-slate-900">Type:</span> 3 BHK Apartment</p>
+                    <p><span class="font-semibold text-slate-900">Timeline:</span> 16 days</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div id="testimonialDots" class="mt-5 flex justify-center gap-2">
+          <button class="h-2.5 w-8 rounded-full bg-brand-500" aria-label="Go to testimonial 1"></button>
+          <button class="h-2.5 w-2.5 rounded-full bg-slate-300" aria-label="Go to testimonial 2"></button>
+          <button class="h-2.5 w-2.5 rounded-full bg-slate-300" aria-label="Go to testimonial 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="trusted" class="pb-16 pt-12">
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-500">Trusted by</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Top developers and finance partners</h2>
+        <div class="mt-8 grid grid-cols-2 gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-soft sm:grid-cols-3 lg:grid-cols-5">
+          <div class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-4 text-center text-sm font-semibold text-slate-600">DLF</div>
+          <div class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-4 text-center text-sm font-semibold text-slate-600">M3M</div>
+          <div class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-4 text-center text-sm font-semibold text-slate-600">Godrej</div>
+          <div class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-4 text-center text-sm font-semibold text-slate-600">HDFC</div>
+          <div class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-4 text-center text-sm font-semibold text-slate-600">ICICI</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="pb-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-slate-900 px-5 py-8 sm:p-10">
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h2 class="text-3xl font-bold text-white sm:text-4xl">Need help choosing the right property?</h2>
+            <p class="mt-2 max-w-2xl text-sm text-white/80 sm:text-base">Talk to a local expert and get curated recommendations with zero brokerage charges.</p>
+          </div>
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <button class="rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-white hover:bg-brand-600">Book Free Consultation</button>
+            <button class="rounded-lg border border-white/35 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">Browse Listings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-brand-500 py-12 text-white">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <img src="D-logo.png" alt="Openhouse logo" class="h-10 w-auto">
+          <p class="mt-3 text-sm text-white/75">Openhouse helps buyers find beautiful homes in Gurugram with trust, speed, and transparency.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white/90">Buyers</h3>
+          <div class="mt-3 space-y-2 text-sm text-white/75">
+            <a href="#" class="block hover:text-white">Browse homes</a>
+            <a href="#" class="block hover:text-white">Home loans</a>
+            <a href="#" class="block hover:text-white">Locality insights</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white/90">Sellers</h3>
+          <div class="mt-3 space-y-2 text-sm text-white/75">
+            <a href="#" class="block hover:text-white">List property</a>
+            <a href="#" class="block hover:text-white">Free valuation</a>
+            <a href="#" class="block hover:text-white">Seller dashboard</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-white/90">Company</h3>
+          <div class="mt-3 space-y-2 text-sm text-white/75">
+            <a href="#" class="block hover:text-white">About us</a>
+            <a href="#" class="block hover:text-white">Careers</a>
+            <a href="#" class="block hover:text-white">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-white/20 pt-4 text-xs text-white/65 sm:flex sm:items-center sm:justify-between">
+        <p>© 2026 Openhouse Technologies Pvt. Ltd.</p>
+        <p class="mt-1 sm:mt-0">Made for home buyers in Gurugram</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconOpen = document.getElementById('menuIconOpen');
+    const menuIconClose = document.getElementById('menuIconClose');
+
+    menuToggle?.addEventListener('click', function () {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden');
+      menuIconClose.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(isHidden));
+    });
+
+    document.getElementById('searchForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const location = document.getElementById('location').value.trim();
+      if (location) {
+        alert('Searching for properties in ' + location);
+      } else {
+        alert('Please enter a location');
+      }
+    });
+
+    document.getElementById('searchFormMobile').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const location = document.getElementById('locationMobile').value.trim();
+      if (location) {
+        alert('Searching for properties in ' + location);
+      } else {
+        alert('Please enter a location');
+      }
+    });
+
+    const testimonialTrack = document.getElementById('testimonialTrack');
+    const testimonialSlides = testimonialTrack ? Array.from(testimonialTrack.children) : [];
+    const testimonialDots = Array.from(document.querySelectorAll('#testimonialDots button'));
+    const testimonialPrev = document.getElementById('testimonialPrev');
+    const testimonialNext = document.getElementById('testimonialNext');
+    const testimonialCarousel = document.getElementById('testimonialCarousel');
+    let testimonialIndex = 0;
+    let testimonialTimer;
+
+    function renderTestimonialSlider(index) {
+      if (!testimonialTrack || testimonialSlides.length === 0) return;
+      testimonialIndex = (index + testimonialSlides.length) % testimonialSlides.length;
+      testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+      testimonialDots.forEach((dot, i) => {
+        dot.classList.toggle('w-8', i === testimonialIndex);
+        dot.classList.toggle('bg-brand-500', i === testimonialIndex);
+        dot.classList.toggle('w-2.5', i !== testimonialIndex);
+        dot.classList.toggle('bg-slate-300', i !== testimonialIndex);
+      });
+    }
+
+    function startTestimonialAutoplay() {
+      stopTestimonialAutoplay();
+      testimonialTimer = setInterval(() => renderTestimonialSlider(testimonialIndex + 1), 4200);
+    }
+
+    function stopTestimonialAutoplay() {
+      if (testimonialTimer) clearInterval(testimonialTimer);
+    }
+
+    testimonialPrev?.addEventListener('click', () => {
+      renderTestimonialSlider(testimonialIndex - 1);
+      startTestimonialAutoplay();
+    });
+    testimonialNext?.addEventListener('click', () => {
+      renderTestimonialSlider(testimonialIndex + 1);
+      startTestimonialAutoplay();
+    });
+    testimonialDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        renderTestimonialSlider(i);
+        startTestimonialAutoplay();
+      });
+    });
+    testimonialCarousel?.addEventListener('mouseenter', stopTestimonialAutoplay);
+    testimonialCarousel?.addEventListener('mouseleave', startTestimonialAutoplay);
+    testimonialCarousel?.addEventListener('touchstart', stopTestimonialAutoplay, { passive: true });
+    testimonialCarousel?.addEventListener('touchend', startTestimonialAutoplay);
+    renderTestimonialSlider(0);
+    startTestimonialAutoplay();
+  </script>
+</body>
+</html>
